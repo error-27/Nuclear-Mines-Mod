@@ -12,6 +12,8 @@ public class NuclearItems implements ContentList {
         ionium = new Item("ionium", Color.acid){{
             localizedName = "Ionium";
             radioactivity = 1.50f;
+            explosiveness = 1.1f;
+            charge = 0.2f;
             cost = 12;
             description = "A material forged of blast compound and thorium. Very radioactive and volatile. Use to make nuclear weapons and reactors";
         }};

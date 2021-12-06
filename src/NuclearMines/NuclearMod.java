@@ -1,7 +1,6 @@
 package NuclearMines;
 
-import NuclearMines.content.NuclearBlocks;
-import NuclearMines.content.NuclearItems;
+import NuclearMines.content.*;
 import arc.*;
 import arc.util.*;
 import mindustry.game.EventType.*;
@@ -17,7 +16,10 @@ public class NuclearMod extends Mod{
     @Override
     public void loadContent(){
         new NuclearItems().load();
+        new NuclearStatus().load();
+        new NuclearBullets().load();
         new NuclearBlocks().load();
+        new NuclearTechTree().load();
     }
 
 }

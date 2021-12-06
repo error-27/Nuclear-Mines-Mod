@@ -7,3 +7,6 @@ A Mindustry mod adding more radiation-based items to the game.
 - Ionium Reactor, a reactor that creates massive amounts of energy at the cost of ionium and cryofluid
 
 #### THIS IS A VERY EARLY VERSION. DO NOT EXPECT EVERYTHING TO BE FINISHED.
+
+This source code was written by looking at the code of other mods. I did not make this entirely myself.
+Code pulled from **Mesokrix/Vanilla-Upgraded**

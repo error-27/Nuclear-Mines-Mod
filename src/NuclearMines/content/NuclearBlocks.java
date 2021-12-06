@@ -1,12 +1,14 @@
 package NuclearMines.content;
 
 import mindustry.content.Blocks;
+import mindustry.content.Bullets;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
 import mindustry.ctype.ContentList;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
+import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.power.ImpactReactor;
 import mindustry.world.blocks.power.NuclearReactor;
 import mindustry.world.blocks.production.GenericCrafter;
@@ -14,7 +16,7 @@ import mindustry.world.blocks.production.GenericCrafter;
 import static mindustry.type.ItemStack.with;
 
 public class NuclearBlocks implements ContentList {
-    public static Block ioniumMixer, ioniumReactor;
+    public static Block ioniumMixer, ioniumReactor, corruption;
 
     @Override
     public void load() {
@@ -40,6 +42,27 @@ public class NuclearBlocks implements ContentList {
             consumes.item(NuclearItems.ionium, 2);
             consumes.liquid(Liquids.cryofluid, 10);
             size = 5;
+        }};
+
+        corruption = new ItemTurret("corruption"){{
+           localizedName = "The Corruption";
+           requirements(Category.turret, with(Items.lead, 400, Items.titanium, 400, Items.plastanium, 100));
+           ammo(Items.thorium, NuclearBullets.nuclearBulletSmall,
+                   NuclearItems.ionium, NuclearBullets.nuclearBulletBig);
+
+           recoilAmount = 10;
+           ammoPerShot = 1;
+           maxAmmo = 10;
+           rotateSpeed = 200;
+           coolantMultiplier = 2f;
+           acceptCoolant = true;
+           coolantUsage = 2.2f;
+           targetAir = false;
+           size = 3;
+           range = 400;
+           minRange = 10;
+           health = 500;
+           description = "A turret that launches radioactive nuclear missiles.";
         }};
     }
 }
