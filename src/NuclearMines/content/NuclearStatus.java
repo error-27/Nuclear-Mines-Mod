@@ -15,7 +15,7 @@ public class NuclearStatus implements ContentList {
            healthMultiplier =  0.8f;
            speedMultiplier = 0.9f;
            damageMultiplier = 1.15f;
-           effectChance = 0.6f;
+           effectChance = 1.0f;
            localizedName = "Irradiated";
            description = "Radiation infects the enemy, causing them to become slower and have less health, but they also do more damage.";
         }};

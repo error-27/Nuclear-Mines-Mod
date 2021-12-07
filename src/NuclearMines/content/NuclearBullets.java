@@ -7,6 +7,7 @@ import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.BombBulletType;
 import mindustry.entities.bullet.BulletType;
 import mindustry.gen.Bullet;
+import mindustry.gen.ElevationMovec;
 
 public class NuclearBullets implements ContentList {
     public static BulletType nuclearBulletSmall, nuclearBulletBig, homingBullet;
@@ -18,7 +19,7 @@ public class NuclearBullets implements ContentList {
             collidesGround = true;
             reflectable = false;
             inaccuracy = 0.1f;
-            splashDamageRadius = 2f;
+            splashDamageRadius = 10f;
             splashDamage = 100f;
             hitShake = 0.4f;
             lifetime = 360;
@@ -26,29 +27,34 @@ public class NuclearBullets implements ContentList {
             trailColor = Color.acid;
 
             frontColor = backColor = Color.green;
-            width = 1f;
-            height = 2f;
+            width = 10f;
+            height = 20f;
         }};
 
         nuclearBulletBig = new BasicBulletType(6.5f, 210f){{
            status = NuclearStatus.irradiated;
-           statusDuration = 45f;
+           statusDuration = 300f;
            collidesAir = false;
            reflectable = false;
            collidesGround = true;
            inaccuracy = 0.1f;
            lightColor = Color.green;
            lightRadius = 2f;
-           lifetime = 360;
+           lifetime = 150;
            hitShake = 0.9f;
-           splashDamageRadius = 4f;
-           splashDamage = 180f;
+           splashDamageRadius = 100f;
+           splashDamage = 150f;
            reloadMultiplier = 1f;
            collidesTiles = true;
 
-           frontColor = backColor = Color.green;
-           width = 2f;
-           height = 2f;
+           backColor = Color.green;
+           frontColor = Color.acid;
+           width = 20f;
+           height = 20f;
+
+           hitSize = 20f;
+           knockback = 5f;
+           scaleVelocity = true;
         }};
     }
 }

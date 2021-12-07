@@ -50,7 +50,7 @@ public class NuclearBlocks implements ContentList {
            ammo(Items.thorium, NuclearBullets.nuclearBulletSmall,
                    NuclearItems.ionium, NuclearBullets.nuclearBulletBig);
 
-           recoilAmount = 10;
+           recoilAmount = 5;
            ammoPerShot = 1;
            maxAmmo = 10;
            rotateSpeed = 200;
