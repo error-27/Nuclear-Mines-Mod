@@ -18,6 +18,7 @@ public class NuclearMod extends Mod{
         new NuclearItems().load();
         new NuclearStatus().load();
         new NuclearBullets().load();
+        new NuclearUnits().load();
         new NuclearBlocks().load();
         new NuclearTechTree().load();
     }

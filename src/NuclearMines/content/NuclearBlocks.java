@@ -1,5 +1,6 @@
 package NuclearMines.content;
 
+import arc.struct.Seq;
 import mindustry.content.Blocks;
 import mindustry.content.Bullets;
 import mindustry.content.Items;
@@ -12,11 +13,12 @@ import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.power.ImpactReactor;
 import mindustry.world.blocks.power.NuclearReactor;
 import mindustry.world.blocks.production.GenericCrafter;
+import mindustry.world.blocks.units.UnitFactory;
 
 import static mindustry.type.ItemStack.with;
 
 public class NuclearBlocks implements ContentList {
-    public static Block ioniumMixer, ioniumReactor, corruption;
+    public static Block ioniumMixer, ioniumReactor, corruption, nuclearFactory;
 
     @Override
     public void load() {
@@ -62,7 +64,19 @@ public class NuclearBlocks implements ContentList {
            range = 400;
            minRange = 10;
            health = 500;
+           reloadTime = 10f;
            description = "A turret that launches radioactive nuclear missiles.";
+        }};
+
+        nuclearFactory = new UnitFactory("nuclear-factory"){{
+            localizedName = "Nuclear Factory";
+            description = "Produces units that have nuclear weapons.";
+            requirements(Category.units, with(Items.titanium, 200, Items.silicon, 30, Items.lead, 100));
+            size = 3;
+            health = 300;
+            consumes.power(3);
+            itemCapacity = 50;
+            plans.add(new UnitPlan(NuclearUnits.virus, 60, with(NuclearItems.ionium, 10, Items.titanium, 20, Items.silicon, 10)));
         }};
     }
 }
