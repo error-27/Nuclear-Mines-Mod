@@ -1,5 +1,5 @@
 #the mod name as displayed in-game
-displayName: "Nuclear Mines"
+displayName: "[lime]Nuclear Mines"
 
 #the internal name of your mod
 name: "nuclear-mines"
@@ -11,7 +11,7 @@ author: "[Error_in_Code]"
 main: "NuclearMines.NuclearMod"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry mod adding radioactive items."
+description: "A Mindustry mod adding radiation, radioactive items, and nuclear weapons.\n[red]Not yet finished. Some Sprites are missing and many things still need balance."
 
 #the mod version
 version: 0.1
