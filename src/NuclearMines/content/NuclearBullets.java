@@ -68,7 +68,7 @@ public class NuclearBullets implements ContentList {
            smokeEffect = Fx.rocketSmokeLarge;
         }};
 
-        radioFrag = new BasicBulletType(7, 50){{
+        radioFrag = new BasicBulletType(6, 30){{
            status = NuclearStatus.irradiated;
            statusDuration = 180f;
            lifetime = 3;
@@ -87,11 +87,12 @@ public class NuclearBullets implements ContentList {
             lifetime = 45f;
             hitSize = 5f;
             fragBullet = radioFrag;
-            fragBullets = 8;
+            fragBullets = 7;
             fragLifeMin = 1.5f;
             fragLifeMax = 2f;
             fragVelocityMax = 5;
             fragVelocityMin = 5;
+            ammoMultiplier = 1;
         }};
     }
 }

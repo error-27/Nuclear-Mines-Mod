@@ -11,13 +11,13 @@ public class NuclearStatus implements ContentList {
     public void load() {
         irradiated = new StatusEffect("irradiated"){{
            damage = 2f;
-           color = Color.acid;
-           healthMultiplier =  0.8f;
+           color = Color.lime;
+           healthMultiplier =  0.9f;
            speedMultiplier = 0.9f;
            damageMultiplier = 1.15f;
-           effectChance = 1.0f;
-           localizedName = "Irradiated";
-           description = "Radiation infects the enemy, causing them to become slower and have less health, but they also do more damage.";
+           effectChance = 0.9f;
+           localizedName = "[lime]Irradiated";
+           description = "[lime]Radiation[white] infects the enemy, causing them to become slower and have less health, but they also do more damage.";
         }};
     }
 }

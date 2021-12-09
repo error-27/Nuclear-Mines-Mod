@@ -16,36 +16,30 @@ public class NuclearUnits implements ContentList {
         virus = new UnitType("virus"){{
             constructor = UnitEntity::create;
 
-            localizedName = "Virus";
+//            outlineRadius = 5;
+//            outlines = true;
+            localizedName = "[lime]Virus";
             description = "A flying unit that fires radioactive flak bullets.";
             flying = true;
             canDrown = false;
             speed = 5f;
             drag = 0.6f;
-            hitSize = 10f;
+            hitSize = 6f;
             health = 300f;
             armor = 3f;
 
             rotateSpeed = 5f;
 
             weapons.add(new Weapon("virus-weapon"){{
-                x = 3;
-                y = 3;
-                reload = 10f;
-                rotate = true;
+                x = 1f;
+                y = 1f;
+                mirror = false;
+                reload = 15f;
+                rotate = false;
 //                shootStatus = NuclearStatus.irradiated;
 //                shootStatusDuration = 180f;
                 bullet = NuclearBullets.radioFlakBullet;
-            }},
-                new Weapon("virus-weapon"){{
-                    x = 7;
-                    y = 3;
-                    reload = 10f;
-                    rotate = true;
-//                    shootStatus = NuclearStatus.irradiated;
-//                    shootStatusDuration = 180f;
-                    bullet = NuclearBullets.radioFlakBullet;
-                }});
+            }});
         }};
     }
 }
