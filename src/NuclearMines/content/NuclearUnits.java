@@ -18,7 +18,7 @@ public class NuclearUnits implements ContentList {
 
 //            outlineRadius = 5;
 //            outlines = true;
-            localizedName = "[lime]Virus";
+            localizedName = "[acid]Virus";
             description = "A flying unit that fires radioactive flak bullets.";
             flying = true;
             canDrown = false;

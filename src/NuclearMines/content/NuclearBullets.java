@@ -18,13 +18,14 @@ public class NuclearBullets implements ContentList {
     public void load() {
         nuclearBulletSmall = new BasicBulletType(6f, 140f){{
             status = NuclearStatus.irradiated;
+            statusDuration = 60f;
             collidesAir = false;
             collidesGround = true;
             reflectable = false;
-            inaccuracy = 0.1f;
+            inaccuracy = 7f;
             splashDamageRadius = 10f;
             splashDamage = 100f;
-            hitShake = 0.4f;
+            hitShake = 1f;
             lifetime = 360;
             lightColor = Color.green;
 //            trailColor = Color.acid;
@@ -37,19 +38,20 @@ public class NuclearBullets implements ContentList {
             hitEffect = Fx.explosion;
             shootEffect = Fx.shootSmall;
             scaleVelocity = true;
+            ammoMultiplier = 1;
         }};
 
         nuclearBulletBig = new BasicBulletType(6.5f, 210f){{
            status = NuclearStatus.irradiated;
-           statusDuration = 300f;
+           statusDuration = 180f;
            collidesAir = false;
            reflectable = false;
            collidesGround = true;
-           inaccuracy = 0.1f;
+           inaccuracy = 7f;
            lightColor = Color.green;
            lightRadius = 2f;
            lifetime = 150;
-           hitShake = 0.9f;
+           hitShake = 2f;
            splashDamageRadius = 100f;
            splashDamage = 150f;
            reloadMultiplier = 1f;
@@ -66,6 +68,7 @@ public class NuclearBullets implements ContentList {
            hitEffect = Fx.massiveExplosion;
            shootEffect = Fx.shootBig;
            smokeEffect = Fx.rocketSmokeLarge;
+           ammoMultiplier = 1;
         }};
 
         radioFrag = new BasicBulletType(6, 30){{

@@ -23,7 +23,7 @@ public class NuclearBlocks implements ContentList {
     @Override
     public void load() {
         ioniumMixer = new GenericCrafter("ionium-mixer"){{
-            localizedName = "Ionium Mixer";
+            localizedName = "[lime]Ionium Mixer";
            requirements(Category.crafting, with(Items.lead, 200, Items.thorium, 50, Items.titanium, 100));
             // Research: blast-mixer, lead 2000, thorium 300, titanium 300
            consumesPower = true;
@@ -35,7 +35,7 @@ public class NuclearBlocks implements ContentList {
         }};
 
         ioniumReactor = new NuclearReactor("ionium-reactor"){{
-            localizedName = "Ionium Reactor";
+            localizedName = "[lime]Ionium Reactor";
            requirements(Category.power, with(Items.lead, 1000, Items.titanium, 700, Items.graphite, 800, Items.metaglass, 800, Items.surgeAlloy, 300));
            // research: impact-reactor
            powerProduction = 800;
@@ -47,29 +47,29 @@ public class NuclearBlocks implements ContentList {
         }};
 
         corruption = new ItemTurret("corruption"){{
-           localizedName = "The Corruption";
-           requirements(Category.turret, with(Items.lead, 400, Items.titanium, 400, Items.plastanium, 100));
+           localizedName = "[acid]The Corruption";
+           requirements(Category.turret, with(Items.lead, 400, Items.titanium, 600, Items.graphite, 500));
            ammo(Items.thorium, NuclearBullets.nuclearBulletSmall,
                    NuclearItems.ionium, NuclearBullets.nuclearBulletBig);
 
-           recoilAmount = 5;
+           recoilAmount = 6;
            ammoPerShot = 1;
            maxAmmo = 10;
-           rotateSpeed = 200;
-           coolantMultiplier = 2f;
+           rotateSpeed = 3;
+           coolantMultiplier = 1.25f;
            acceptCoolant = true;
-           coolantUsage = 2.2f;
+           coolantUsage = 2.8f;
            targetAir = false;
            size = 3;
            range = 400;
            minRange = 10;
-           health = 500;
-           reloadTime = 10f;
-           description = "A turret that launches radioactive nuclear missiles.";
+           health = 1760;
+           reloadTime = 55f;
+           description = "A turret that launches radioactive nuclear missiles over a long range.";
         }};
 
         nuclearFactory = new UnitFactory("nuclear-factory"){{
-            localizedName = "Nuclear Factory";
+            localizedName = "[lime]Nuclear Factory";
             description = "Produces units that have nuclear weapons.";
             requirements(Category.units, with(Items.titanium, 200, Items.silicon, 30, Items.lead, 100));
             size = 3;

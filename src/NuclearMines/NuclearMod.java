@@ -16,6 +16,7 @@ public class NuclearMod extends Mod{
     @Override
     public void loadContent(){
         new NuclearItems().load();
+        new NuclearEffects().load();
         new NuclearStatus().load();
         new NuclearBullets().load();
         new NuclearUnits().load();
