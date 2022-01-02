@@ -8,17 +8,19 @@ import mindustry.content.Liquids;
 import mindustry.ctype.ContentList;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
+import mindustry.type.UnitType;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.power.ImpactReactor;
 import mindustry.world.blocks.power.NuclearReactor;
 import mindustry.world.blocks.production.GenericCrafter;
+import mindustry.world.blocks.units.Reconstructor;
 import mindustry.world.blocks.units.UnitFactory;
 
 import static mindustry.type.ItemStack.with;
 
 public class NuclearBlocks implements ContentList {
-    public static Block ioniumMixer, ioniumReactor, corruption, nuclearFactory;
+    public static Block ioniumMixer, ioniumReactor, corruption, nuclearFactory, nuclearUpgrader;
 
     @Override
     public void load() {
@@ -68,6 +70,7 @@ public class NuclearBlocks implements ContentList {
            description = "A turret that launches radioactive nuclear missiles over a long range.";
         }};
 
+        // Unit blocks
         nuclearFactory = new UnitFactory("nuclear-factory"){{
             localizedName = "[lime]Nuclear Factory";
             description = "Produces units that have nuclear weapons.";
@@ -77,6 +80,23 @@ public class NuclearBlocks implements ContentList {
             consumes.power(3);
             itemCapacity = 50;
             plans.add(new UnitPlan(NuclearUnits.virus, 300, with(NuclearItems.ionium, 10, Items.titanium, 20, Items.silicon, 10)));
+        }};
+
+        nuclearUpgrader = new Reconstructor("nuclear-upgrader"){{
+            localizedName = "[lime]Nuclear Upgrader";
+            description = "Upgrades nuclear units.";
+            requirements(Category.units, with(Items.titanium, 300, Items.silicon, 60, Items.lead, 1000));
+            size = 5;
+            health = 400;
+            hasLiquids = true;
+            consumes.power(5);
+            consumes.items(with(Items.titanium, 20, NuclearItems.ionium, 15));
+            consumes.liquid(Liquids.cryofluid, 8);
+            itemCapacity = 55;
+            constructTime = 360;
+            upgrades.addAll(
+                    new UnitType[]{NuclearUnits.virus, NuclearUnits.infection}
+            );
         }};
     }
 }

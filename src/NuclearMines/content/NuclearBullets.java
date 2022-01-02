@@ -13,7 +13,7 @@ import mindustry.gen.ElevationMovec;
 import mindustry.content.Fx;
 
 public class NuclearBullets implements ContentList {
-    public static BulletType nuclearBulletSmall, nuclearBulletBig, radioFlakBullet, radioFrag;
+    public static BulletType nuclearBulletSmall, nuclearBulletBig, radioFlakBullet, radioFrag, radioBasicShot;
     @Override
     public void load() {
         nuclearBulletSmall = new BasicBulletType(6f, 140f){{
@@ -96,6 +96,23 @@ public class NuclearBullets implements ContentList {
             fragVelocityMax = 5;
             fragVelocityMin = 5;
             ammoMultiplier = 1;
+        }};
+
+        radioBasicShot = new BasicBulletType(7, 55){{
+            // Status effects
+            status = NuclearStatus.irradiated;
+            statusDuration = 200f;
+
+            // Collision, lifetime, ammo
+            hitSize = 5f;
+            collidesAir = true;
+            collidesGround = true;
+            lifetime = 50f;
+            ammoMultiplier = 1;
+
+            // Cosmetic effects
+            frontColor = Color.acid;
+            backColor = Color.gray;
         }};
     }
 }
