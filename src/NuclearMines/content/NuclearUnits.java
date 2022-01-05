@@ -34,7 +34,7 @@ public class NuclearUnits implements ContentList {
                 x = 1f;
                 y = 1f;
                 mirror = false;
-                reload = 15f;
+                reload = 20f;
                 rotate = false;
                 bullet = NuclearBullets.radioFlakBullet;
             }});
@@ -59,16 +59,16 @@ public class NuclearUnits implements ContentList {
                 x = 1f;
                 y = 1f;
                 mirror = false;
-                reload = 15f;
+                reload = 20f;
                 rotate = false;
                 bullet = NuclearBullets.radioFlakBullet;
             }});
 
             weapons.add(new Weapon("infection-weapon"){{
-                x = 0f;
+                x = -5f;
                 y = 0f;
                 mirror = true;
-                reload = 10f;
+                reload = 5f;
                 rotate = true;
                 bullet = NuclearBullets.radioBasicShot;
             }});
