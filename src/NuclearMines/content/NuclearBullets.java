@@ -104,7 +104,7 @@ public class NuclearBullets implements ContentList {
             statusDuration = 200f;
 
             // Collision, lifetime, ammo
-            hitSize = 5f;
+            hitSize = 7f;
             collidesAir = true;
             collidesGround = true;
             lifetime = 50f;

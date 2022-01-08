@@ -44,7 +44,7 @@ public class NuclearUnits implements ContentList {
             constructor = UnitEntity::create;
 
             localizedName = "[acid]Infection";
-            description = "An upgrade to [acid]Virus[white], with more weapons.";
+            description = "An upgrade to [acid]Virus[white].";
             flying = true;
             canDrown = false;
             speed = 5.5f;
@@ -55,14 +55,14 @@ public class NuclearUnits implements ContentList {
 
             rotateSpeed = 4.6f;
 
-            weapons.add(new Weapon("virus-weapon"){{
-                x = 1f;
-                y = 1f;
-                mirror = false;
-                reload = 20f;
-                rotate = false;
-                bullet = NuclearBullets.radioFlakBullet;
-            }});
+//            weapons.add(new Weapon("virus-weapon"){{
+//                x = 1f;
+//                y = 1f;
+//                mirror = false;
+//                reload = 20f;
+//                rotate = false;
+//                bullet = NuclearBullets.radioFlakBullet;
+//            }});
 
             weapons.add(new Weapon("infection-weapon"){{
                 x = -5f;
