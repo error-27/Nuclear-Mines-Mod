@@ -1,20 +1,17 @@
 package NuclearMines;
 
 import NuclearMines.content.*;
-import arc.*;
-import arc.util.*;
-import mindustry.game.EventType.*;
 import mindustry.mod.*;
-import mindustry.ui.dialogs.*;
 
 public class NuclearMod extends Mod{
 
     public NuclearMod(){
-
+        // Nothing required. Loading Content is done in another method
     }
 
     @Override
     public void loadContent(){
+        // Load mod contents
         new NuclearItems().load();
         new NuclearEffects().load();
         new NuclearStatus().load();

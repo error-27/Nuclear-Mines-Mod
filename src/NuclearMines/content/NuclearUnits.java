@@ -1,8 +1,6 @@
 package NuclearMines.content;
 
 import mindustry.ctype.ContentList;
-import mindustry.gen.Flyingc;
-import mindustry.gen.Unit;
 import mindustry.gen.UnitEntity;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
@@ -12,32 +10,30 @@ public class NuclearUnits implements ContentList {
     public static UnitType virus;
 
     @Override
-    public void load() {
+    public void load() { // Load content
         virus = new UnitType("virus"){{
-            constructor = UnitEntity::create;
+            constructor = UnitEntity::create; // Add constructor
 
-//            outlineRadius = 5;
-//            outlines = true;
+            // Basic properties
             localizedName = "[acid]Virus";
             description = "A flying unit that fires radioactive flak bullets.";
+
+            health = 300f;
+            armor = 3f;
             flying = true;
             canDrown = false;
             speed = 5f;
             drag = 0.6f;
             hitSize = 6f;
-            health = 300f;
-            armor = 3f;
-
             rotateSpeed = 5f;
 
+            // Weapons
             weapons.add(new Weapon("virus-weapon"){{
                 x = 1f;
                 y = 1f;
                 mirror = false;
                 reload = 15f;
                 rotate = false;
-//                shootStatus = NuclearStatus.irradiated;
-//                shootStatusDuration = 180f;
                 bullet = NuclearBullets.radioFlakBullet;
             }});
         }};
