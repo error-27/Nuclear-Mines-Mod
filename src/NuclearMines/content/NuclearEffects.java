@@ -9,8 +9,9 @@ public class NuclearEffects implements ContentList {
     public static Effect irradiatedFx;
 
     @Override
-    public void load() {
+    public void load() { // Load content
         irradiatedFx = new ParticleEffect(){{
+            // Properties
             particles = 1;
             lifetime = 60;
             region = "shell";
