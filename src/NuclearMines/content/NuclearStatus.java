@@ -1,7 +1,6 @@
 package NuclearMines.content;
 
 import arc.graphics.Color;
-import mindustry.content.Fx;
 import mindustry.ctype.ContentList;
 import mindustry.type.StatusEffect;
 

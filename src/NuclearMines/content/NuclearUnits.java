@@ -1,8 +1,6 @@
 package NuclearMines.content;
 
 import mindustry.ctype.ContentList;
-import mindustry.gen.Flyingc;
-import mindustry.gen.Unit;
 import mindustry.gen.UnitEntity;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
