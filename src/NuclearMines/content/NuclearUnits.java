@@ -16,8 +16,6 @@ public class NuclearUnits implements ContentList {
         virus = new UnitType("virus"){{
             constructor = UnitEntity::create;
 
-//            outlineRadius = 5;
-//            outlines = true;
             localizedName = "[acid]Virus";
             description = "A flying unit that fires radioactive flak bullets.";
             flying = true;
@@ -36,8 +34,6 @@ public class NuclearUnits implements ContentList {
                 mirror = false;
                 reload = 15f;
                 rotate = false;
-//                shootStatus = NuclearStatus.irradiated;
-//                shootStatusDuration = 180f;
                 bullet = NuclearBullets.radioFlakBullet;
             }});
         }};

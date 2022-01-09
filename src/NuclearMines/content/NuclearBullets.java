@@ -1,21 +1,20 @@
 package NuclearMines.content;
 
-import arc.fx.FxProcessor;
 import arc.graphics.Color;
 import mindustry.ctype.ContentList;
-import mindustry.entities.Effect;
 import mindustry.entities.bullet.BasicBulletType;
-import mindustry.entities.bullet.BombBulletType;
 import mindustry.entities.bullet.BulletType;
 import mindustry.entities.bullet.FlakBulletType;
-import mindustry.gen.Bullet;
-import mindustry.gen.ElevationMovec;
 import mindustry.content.Fx;
 
 public class NuclearBullets implements ContentList {
-    public static BulletType nuclearBulletSmall, nuclearBulletBig, radioFlakBullet, radioFrag;
+    public static BulletType nuclearBulletSmall, nuclearBulletBig, // Artillery
+
+    radioFlakBullet, radioFrag; // Frag
+
     @Override
-    public void load() {
+    public void load() { // Load content
+        // Load artillery bullets
         nuclearBulletSmall = new BasicBulletType(6f, 140f){{
             status = NuclearStatus.irradiated;
             statusDuration = 60f;
@@ -28,7 +27,6 @@ public class NuclearBullets implements ContentList {
             hitShake = 1f;
             lifetime = 360;
             lightColor = Color.green;
-//            trailColor = Color.acid;
 
             frontColor = backColor = Color.green;
             width = 10f;
@@ -71,6 +69,7 @@ public class NuclearBullets implements ContentList {
            ammoMultiplier = 1;
         }};
 
+        // Load frag bullets
         radioFrag = new BasicBulletType(6, 30){{
            status = NuclearStatus.irradiated;
            statusDuration = 180f;
