@@ -98,7 +98,7 @@ public class NuclearBullets implements ContentList {
             ammoMultiplier = 1;
         }};
 
-        radioBasicShot = new BasicBulletType(7, 55){{
+        radioBasicShot = new BasicBulletType(7, 20){{
             // Status effects
             status = NuclearStatus.irradiated;
             statusDuration = 200f;
