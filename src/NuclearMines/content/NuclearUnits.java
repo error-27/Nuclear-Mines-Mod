@@ -1,5 +1,6 @@
 package NuclearMines.content;
 
+import mindustry.content.Fx;
 import mindustry.ctype.ContentList;
 import mindustry.gen.Flyingc;
 import mindustry.gen.Unit;
@@ -24,9 +25,10 @@ public class NuclearUnits implements ContentList {
             canDrown = false;
             speed = 5f;
             drag = 0.6f;
-            hitSize = 6f;
+            hitSize = 8f;
             health = 300f;
             armor = 3f;
+            commandLimit = 3;
 
             rotateSpeed = 5f;
 
@@ -37,6 +39,7 @@ public class NuclearUnits implements ContentList {
                 reload = 20f;
                 rotate = false;
                 bullet = NuclearBullets.radioFlakBullet;
+                ejectEffect = Fx.casing2;
             }});
         }};
 
@@ -71,6 +74,7 @@ public class NuclearUnits implements ContentList {
                 reload = 5f;
                 rotate = true;
                 bullet = NuclearBullets.radioBasicShot;
+                ejectEffect = Fx.casing1;
             }});
         }};
     }

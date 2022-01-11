@@ -71,7 +71,7 @@ public class NuclearBullets implements ContentList {
            ammoMultiplier = 1;
         }};
 
-        radioFrag = new BasicBulletType(6, 30){{
+        radioFrag = new BasicBulletType(4, 30){{
            status = NuclearStatus.irradiated;
            statusDuration = 180f;
            lifetime = 3;
@@ -80,7 +80,7 @@ public class NuclearBullets implements ContentList {
            backColor = Color.acid;
         }};
 
-        radioFlakBullet = new FlakBulletType(7, 70){{
+        radioFlakBullet = new FlakBulletType(5, 70){{
             frontColor = Color.yellow;
             backColor = Color.acid;
             status = NuclearStatus.irradiated;
@@ -98,7 +98,7 @@ public class NuclearBullets implements ContentList {
             ammoMultiplier = 1;
         }};
 
-        radioBasicShot = new BasicBulletType(7, 20){{
+        radioBasicShot = new BasicBulletType(4, 20){{
             // Status effects
             status = NuclearStatus.irradiated;
             statusDuration = 200f;
