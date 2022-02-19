@@ -2,23 +2,20 @@ package NuclearMines.content;
 
 import mindustry.content.Fx;
 import mindustry.ctype.ContentList;
-import mindustry.gen.Flyingc;
-import mindustry.gen.Unit;
-import mindustry.gen.UnitEntity;
+import mindustry.gen.*;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
+import mindustry.annotations.Annotations.*;
 
 
 public class NuclearUnits implements ContentList {
-    public static UnitType virus, infection, plague;
+    public static @EntityDef(value = {Unitc.class, Flyingc.class}) UnitType virus, infection, plague;
 
     @Override
     public void load() {
         virus = new UnitType("virus"){{
             constructor = UnitEntity::create;
 
-//            outlineRadius = 5;
-//            outlines = true;
             localizedName = "[acid]Virus";
             description = "A flying unit that fires radioactive flak bullets.";
             flying = true;
