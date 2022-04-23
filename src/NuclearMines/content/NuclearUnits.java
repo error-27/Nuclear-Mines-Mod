@@ -1,5 +1,7 @@
 package NuclearMines.content;
 
+import NuclearMines.type.NestedUnitType;
+import NuclearMines.type.nested.NestedMech;
 import mindustry.content.Fx;
 import mindustry.ctype.ContentList;
 import mindustry.gen.*;
@@ -10,6 +12,8 @@ import mindustry.annotations.Annotations.*;
 
 public class NuclearUnits implements ContentList {
     public static @EntityDef(value = {Unitc.class, Flyingc.class}) UnitType virus, infection, plague;
+
+    public static @EntityDef(value = {Unitc.class, Mechc.class}) UnitType source, radical;
 
     @Override
     public void load() {
@@ -73,6 +77,39 @@ public class NuclearUnits implements ContentList {
                 bullet = NuclearBullets.radioBasicShot;
                 ejectEffect = Fx.casing1;
             }});
+        }};
+
+        radical = new UnitType("radical"){{
+            constructor = MechUnit::create;
+
+            localizedName = "[acid]Radical";
+            flying = false;
+            canDrown = true;
+            speed = 2.4f;
+            health = 100;
+            hitSize = 8f;
+
+            weapons.add(new Weapon("radio-cannon"){{
+                reload = 13f;
+                x = 4f;
+                y = 2f;
+                top = false;
+                ejectEffect = Fx.casing1;
+                bullet = NuclearBullets.radioBasicShot;
+            }});
+        }};
+
+        source = new NestedUnitType("source"){{
+           constructor = NestedMech::new;
+
+           localizedName = "[acid]Source";
+           flying = false;
+           canDrown = true;
+           speed = 1;
+           health = 200;
+           hitSize = 10f;
+           child = radical;
+           childNumber = 3;
         }};
     }
 }

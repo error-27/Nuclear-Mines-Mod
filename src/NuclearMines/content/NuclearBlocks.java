@@ -80,6 +80,7 @@ public class NuclearBlocks implements ContentList {
             consumes.power(3);
             itemCapacity = 50;
             plans.add(new UnitPlan(NuclearUnits.virus, 300, with(NuclearItems.ionium, 10, Items.titanium, 20, Items.silicon, 10)));
+            plans.add(new UnitPlan(NuclearUnits.source, 300, with(NuclearItems.ionium, 10, Items.titanium, 20, Items.silicon, 10)));
         }};
 
         nuclearUpgrader = new Reconstructor("nuclear-upgrader"){{
